@@ -16,5 +16,14 @@ public class homework {
         String fullName = "Иванов Семён Семёнович";
         fullName = fullName.replace('ё', 'е');
         System.out.println(fullName);
+        // решение через split contains
+        System.out.println("Задание 3.2");
+        String[] splitName = fullName.split(" ");
+        for (int i = 0; i < splitName.length; i++) {
+            if (splitName[i].contains("ё")) {
+                splitName[i] = splitName[i].replace('ё', 'е');
+            }
+            System.out.print(splitName[i] + " ");
+        }
     }
 }
